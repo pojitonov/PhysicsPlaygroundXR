@@ -28,6 +28,7 @@ MonoBehaviour:
     - 2ef3b848fdc0e3e45891f66b6d0937af
     - 6daefee0228763845a156dbfc9ccc895
     - e2e18adab8e44c80bba641bfb721ce37
+    - 10f4e50d9bfabc445920e166b5409b8d
     values:
     - iconNameOrGuid: sv_icon_dot3_pix16_gizmo
       colorIndex: 0
@@ -53,11 +54,11 @@ MonoBehaviour:
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
-    - iconNameOrGuid: sv_icon_dot7_pix16_gizmo
+    - iconNameOrGuid: sv_icon_dot1_pix16_gizmo
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
-    - iconNameOrGuid: sv_icon_dot1_pix16_gizmo
+    - iconNameOrGuid: Prefab Icon
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
@@ -82,6 +83,10 @@ MonoBehaviour:
       isIconRecursive: 0
       isColorRecursive: 0
     - iconNameOrGuid: cs Script Icon
+      colorIndex: 0
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: sv_icon_dot1_pix16_gizmo
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
