@@ -15,6 +15,7 @@ MonoBehaviour:
   sceneDatas_byGuid:
     keys:
     - bc83b2773fe0c7041b91c2c4d0ff32c3
+    - 6fe70052ebcb32647be8754d2943bfc4
     values:
     - goDatas_byGlobalId:
         keys:
@@ -27,6 +28,29 @@ MonoBehaviour:
           isColorRecursive: 0
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-6fe70052ebcb32647be8754d2943bfc4-1519157156-0
+        - globalObjectIdString: GlobalObjectId_V1-2-6fe70052ebcb32647be8754d2943bfc4-1992080786-0
+        - globalObjectIdString: GlobalObjectId_V1-2-6fe70052ebcb32647be8754d2943bfc4-398300914-0
+        - globalObjectIdString: GlobalObjectId_V1-2-6fe70052ebcb32647be8754d2943bfc4-868381215-0
+        values:
+        - colorIndex: 1
+          iconNameOrGuid: AvatarMask On Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 1
+          iconNameOrGuid: PreMatCube
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 1
+          iconNameOrGuid: Canvas Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []

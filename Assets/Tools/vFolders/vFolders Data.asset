@@ -29,6 +29,7 @@ MonoBehaviour:
     - 6daefee0228763845a156dbfc9ccc895
     - e2e18adab8e44c80bba641bfb721ce37
     - 10f4e50d9bfabc445920e166b5409b8d
+    - d539468f34197574d9f4b5b80c751ba0
     values:
     - iconNameOrGuid: sv_icon_dot3_pix16_gizmo
       colorIndex: 0
@@ -87,6 +88,10 @@ MonoBehaviour:
       isIconRecursive: 0
       isColorRecursive: 0
     - iconNameOrGuid: sv_icon_dot1_pix16_gizmo
+      colorIndex: 0
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: PrefabModel Icon
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
