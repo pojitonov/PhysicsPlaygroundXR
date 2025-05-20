@@ -155,7 +155,6 @@ GameObject:
   - component: {fileID: 4595713594582743602}
   - component: {fileID: 1768059433068700156}
   - component: {fileID: 5878636684427908567}
-  - component: {fileID: 6696975941130535447}
   - component: {fileID: 1508443793860560530}
   - component: {fileID: 3068607008623219577}
   - component: {fileID: 5253913755675623177}
@@ -281,7 +280,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 2
@@ -324,18 +323,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 500
   m_ConnectedMassScale: 500
---- !u!75 &6696975941130535447
-ConstantForce:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6935707834432381318}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!135 &1508443793860560530
 SphereCollider:
   m_ObjectHideFlags: 0

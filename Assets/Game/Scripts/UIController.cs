@@ -45,7 +45,11 @@ public class UIController : MonoBehaviour
         }
         else
         {
-            
+            experimentFrame.SetActive(false);
+            experimentTitle.SetActive(false);
+            experiment.SetActive(false);
+            experimentTitle.transform.localScale = new Vector3(0, 0, 0);
+            isActive = false;
         }
     }
 
@@ -88,6 +92,7 @@ public class UIController : MonoBehaviour
         await Sequence.Create()
             .Group(Tween.Scale(experimentTitle.transform, endValue: 0.00061f, duration: 0.5f));
         await Tween.Delay(0.5f);
+        
         experiment.SetActive(true);
     }
 }
