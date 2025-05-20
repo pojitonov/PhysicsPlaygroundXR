@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using Oculus.Interaction;
 using PrimeTween;
@@ -16,22 +17,36 @@ public class UIController : MonoBehaviour
     private GameObject _UIPanel;
     private GameObject _leftNavigation;
     private bool isActive;
+    private bool menuShown;
 
     private void Awake()
     {
         FindGameObjectByName("UIPanel", ref _UIPanel);
         FindGameObjectByName("LeftNavSize", ref _leftNavigation);
+        _UIPanel.SetActive(false);
         experimentFrame.SetActive(false);
         experimentTitle.SetActive(false);
         experiment.SetActive(false);
         experimentTitle.transform.localScale = new Vector3(0, 0, 0);
     }
-    
 
     void Start()
     {
         _leftNavigation.SetActive(showSideBar);
         SetSize().Forget();
+    }
+
+    public void PushButton()
+    {
+        if (!menuShown)
+        {
+            _UIPanel.SetActive(true);
+            menuShown = true;
+        }
+        else
+        {
+            
+        }
     }
 
     private void FindGameObjectByName(string name, ref GameObject target, Transform root = null)
@@ -65,12 +80,13 @@ public class UIController : MonoBehaviour
     {
         experimentFrame.SetActive(true);
         experimentTitle.SetActive(true);
-        
+
         var Frame = experimentFrame.GetComponent<RoundedBoxProperties>();
         await Sequence.Create()
             .Group(Tween.Custom(0f, 0.6f, duration: 1f, onValueChange: newVal => Frame.Height = newVal))
             .Group(Tween.Custom(0f, 0.6f, duration: 1f, onValueChange: newVal => Frame.Width = newVal));
-        await Tween.Scale(experimentTitle.transform, endValue: 0.00061f, duration: 0.5f);
+        await Sequence.Create()
+            .Group(Tween.Scale(experimentTitle.transform, endValue: 0.00061f, duration: 0.5f));
         await Tween.Delay(0.5f);
         experiment.SetActive(true);
     }

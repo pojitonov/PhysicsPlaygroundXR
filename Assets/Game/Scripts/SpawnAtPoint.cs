@@ -1,8 +1,11 @@
 using Meta.XR.MRUtilityKit;
 using UnityEngine;
+using System;
 
 public class SpawnAtPoint : MonoBehaviour
 {
+    public event Action OnSpawned;
+    
     [SerializeField] GameObject objectToSpawn;
     [SerializeField] bool isScenePrefab;
     [SerializeField] MRUKAnchor.SceneLabels label;
@@ -39,6 +42,7 @@ public class SpawnAtPoint : MonoBehaviour
 
                 obj.transform.SetParent(transform);
                 spawned = true;
+                OnSpawned?.Invoke();
                 break;
             }
         }
