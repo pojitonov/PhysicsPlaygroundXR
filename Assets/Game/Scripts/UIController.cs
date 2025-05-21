@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private float targetHeight = 600f;
     [SerializeField] private GameObject experimentFrame;
     [SerializeField] private GameObject experimentTitle;
+    [SerializeField] private GameObject experimentControl;
     [SerializeField] private GameObject experiment;
 
     private GameObject _UIPanel;
@@ -25,6 +26,7 @@ public class UIController : MonoBehaviour
         FindGameObjectByName("LeftNavSize", ref _leftNavigation);
         _UIPanel.SetActive(false);
         experimentFrame.SetActive(false);
+        experimentControl.SetActive(false);
         experimentTitle.SetActive(false);
         experiment.SetActive(false);
         experimentTitle.transform.localScale = new Vector3(0, 0, 0);
@@ -48,6 +50,7 @@ public class UIController : MonoBehaviour
             experimentFrame.SetActive(false);
             experimentTitle.SetActive(false);
             experiment.SetActive(false);
+            experimentControl.SetActive(false);
             experimentTitle.transform.localScale = new Vector3(0, 0, 0);
             isActive = false;
         }
@@ -94,5 +97,6 @@ public class UIController : MonoBehaviour
         await Tween.Delay(0.5f);
         
         experiment.SetActive(true);
+        experimentControl.SetActive(true);
     }
 }

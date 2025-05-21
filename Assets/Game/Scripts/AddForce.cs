@@ -7,11 +7,10 @@ public class CradleEndBall : MonoBehaviour
     public Rigidbody rb;
     public float forceAmount = 100f;
     public bool startFirst;
-    public int cooldown = 1;
     public AudioSource audioSource;
 
     private UniTaskCompletionSource collisionTcs;
-    private bool isAnimating = false;
+    private bool isAnimating;
 
     void Start()
     {
@@ -33,7 +32,6 @@ public class CradleEndBall : MonoBehaviour
 
         await collisionTcs.Task;
 
-        await UniTask.Delay(cooldown * 1000);
 
         otherEndBall.AnimateOnce().Forget();
         isAnimating = false;
@@ -43,6 +41,7 @@ public class CradleEndBall : MonoBehaviour
     {
         if (collisionTcs != null && !collisionTcs.Task.Status.IsCompleted())
         {
+            UniTask.Delay(100);
             collisionTcs.TrySetResult();
             audioSource.Play();
         }
