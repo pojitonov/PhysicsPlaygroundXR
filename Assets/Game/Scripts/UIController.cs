@@ -18,7 +18,6 @@ public class UIController : MonoBehaviour
     private GameObject _UIPanel;
     private GameObject _leftNavigation;
     private bool isActive;
-    private bool menuShown;
 
     private void Awake()
     {
@@ -40,20 +39,14 @@ public class UIController : MonoBehaviour
 
     public void PushButton()
     {
-        if (!menuShown)
-        {
             _UIPanel.SetActive(true);
-            menuShown = true;
-        }
-        else
-        {
             experimentFrame.SetActive(false);
             experimentTitle.SetActive(false);
             experiment.SetActive(false);
             experimentControl.SetActive(false);
             experimentTitle.transform.localScale = new Vector3(0, 0, 0);
             isActive = false;
-        }
+        
     }
 
     private void FindGameObjectByName(string name, ref GameObject target, Transform root = null)
@@ -81,6 +74,8 @@ public class UIController : MonoBehaviour
             LoadExperiment1().Forget();
             isActive = true;
         }
+        
+        _UIPanel.SetActive(false);
     }
 
     private async UniTaskVoid LoadExperiment1()
