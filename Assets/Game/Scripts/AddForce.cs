@@ -1,9 +1,9 @@
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 
-public class CradleEndBall : MonoBehaviour
+public class AddForce : MonoBehaviour
 {
-    public CradleEndBall otherEndBall;
+    public AddForce otherEndBall;
     public Rigidbody rb;
     public float forceAmount = 100f;
     public bool startFirst;
